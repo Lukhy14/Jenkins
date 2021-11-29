@@ -12,8 +12,7 @@ pipeline {
 
     stage('CRM') {
       steps {
-        echo 'CRMTOKEN.access_token'
-        httpRequest(url: 'https://testeqdepot.sugarondemand.com/rest/v10/Contacts?max_num=1', contentType: 'APPLICATION_JSON', httpMode: 'GET', consoleLogResponseBody: true, acceptType: 'APPLICATION_JSON', responseHandle: 'STRING', authentication: 'CRMTOKEN')
+        httpRequest(url: 'https://testeqdepot.sugarondemand.com/rest/v10/Contacts?max_num=1', contentType: 'APPLICATION_JSON', httpMode: 'GET', consoleLogResponseBody: true, acceptType: 'APPLICATION_JSON', responseHandle: 'STRING', authentication: 'access_token')
       }
     }
 
