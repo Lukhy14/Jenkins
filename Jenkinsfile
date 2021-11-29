@@ -13,8 +13,8 @@ pipeline {
     stage('CRM') {
       steps {
         
-        def response= httpRequest(url: 'https://testeqdepot.sugarondemand.com/rest/v10/Contacts?max_num=1', contentType: 'APPLICATION_JSON', httpMode: 'GET',acceptType: 'APPLICATION_FORM', responseHandle: 'STRING')
-        println("Status: "+response)
+       httpRequest(url: 'https://testeqdepot.sugarondemand.com/rest/v10/Contacts?max_num=1', contentType: 'APPLICATION_JSON', httpMode: 'GET',acceptType: 'APPLICATION_FORM', responseHandle: 'STRING')
+       
         
       }
     }
