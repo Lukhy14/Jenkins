@@ -16,5 +16,11 @@ pipeline {
       }
     }
 
+    stage('CRMTOKEN') {
+      steps {
+        httpRequest(url: 'https://testeqdepot.sugarondemand.com/rest/v11/oauth2/token?username=dm1&grant_type=password&client_id=sugar&password=Suavis*123&platform=apiCRM')
+      }
+    }
+
   }
 }
